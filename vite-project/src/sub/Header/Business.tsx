@@ -27,7 +27,7 @@ export default function Business() {
   };
 
   useEffect(() => {
-    console.log('business')
+
     fetch('http://localhost:8001/articles', {
       method: 'GET',
       headers: {
@@ -48,11 +48,7 @@ export default function Business() {
           
         return data;
       })
-      
-      .catch((err) => {
-        console.log(err.message);
-      });
-   
+     
     });
     
   }, [])
@@ -140,29 +136,7 @@ export default function Business() {
           </div>
         ))}
 
-        <nav aria-label="...">
-          <MDBPagination circle className="mb-0 justify-content-center">
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#" tabIndex={-1} aria-disabled="true">
-                Previous
-              </MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">1</MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem active>
-              <MDBPaginationLink href="#">
-                2 <span className="visually-hidden">(current)</span>
-              </MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">3</MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">Next</MDBPaginationLink>
-            </MDBPaginationItem>
-          </MDBPagination>
-        </nav>
+     
       </MDBContainer>
     </div>
 

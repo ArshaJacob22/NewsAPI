@@ -17,7 +17,7 @@ export default function Apple() {
   const [urlToImage, setUrlToImage] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  console.log('apple');
+
   const arrayChunk = (arr, n) => {
     const array = arr.slice();
     const chunks = [];
@@ -37,7 +37,7 @@ export default function Apple() {
       .then((response) =>
         response.json())
       .then((data) => {
-        console.log(data);
+
         setData(data);
         data.map((singleObject, index) => {
           if (index === 0) {
@@ -138,29 +138,7 @@ export default function Apple() {
           </div>
         ))}
 
-        <nav aria-label="...">
-          <MDBPagination circle className="mb-0 justify-content-center">
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#" tabIndex={-1} aria-disabled="true">
-                Previous
-              </MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">1</MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem active>
-              <MDBPaginationLink href="#">
-                2 <span className="visually-hidden">(current)</span>
-              </MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">3</MDBPaginationLink>
-            </MDBPaginationItem>
-            <MDBPaginationItem>
-              <MDBPaginationLink href="#">Next</MDBPaginationLink>
-            </MDBPaginationItem>
-          </MDBPagination>
-        </nav>
+
       </MDBContainer>
     </div>
 

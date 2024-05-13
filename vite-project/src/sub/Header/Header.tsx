@@ -3,10 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import { withRouter } from "react-router-dom"
-import Apple from './Apple';
+import { useNavigate } from 'react-router-dom';
+
 function a11yProps(index: number) {
 
   return {
@@ -18,24 +16,23 @@ function a11yProps(index: number) {
  function Header() {
 
   const [value, setValue] = React.useState(0);
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleChange = (event: React.SyntheticEvent, value: number) => {
     event.preventDefault()
     setValue(value);
-    console.log(value);
-    
+   
     if (value === 1) {
-      history.push('/apple');    
+      navigate("/apple")
     } else if (value === 2) {
-      history.push('/business');      
+      navigate("/business")
     } else if (value === 3) {
-      history.push('/technology');
+      navigate("/technology")
     } else if (value === 4) {
-      history.push('/wsj');
+      navigate("/wsj")
     } else if (value === 5) {
-      history.push('/us');
+      navigate("/us")
     }else {
-      history.push('/');
+      navigate("/business")
     }
     
   };
@@ -64,4 +61,4 @@ function a11yProps(index: number) {
     </Box>
   );
 }
-export default withRouter(Header);
+export default Header;

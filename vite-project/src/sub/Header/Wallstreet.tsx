@@ -48,10 +48,7 @@ export default function Wallstreet() {
           
         return data;
       })
-      
-      .catch((err) => {
-        console.log(err.message);
-      });
+     
    
     });
     

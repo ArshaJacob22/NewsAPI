@@ -8,7 +8,8 @@ import Header from './sub/Header/Header.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-        <App />
+    <Header/>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
 )

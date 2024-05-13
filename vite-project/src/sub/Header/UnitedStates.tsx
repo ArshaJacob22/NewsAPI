@@ -49,9 +49,7 @@ export default function UnitedStates() {
         return data;
       })
       
-      .catch((err) => {
-        console.log(err.message);
-      });
+   
    
     });
     
